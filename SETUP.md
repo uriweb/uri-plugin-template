@@ -2,7 +2,7 @@
 
 Running gulp and PHP Code Sniffer requires a few prerequsites.
 
-## <a name="gulp"></a>Setting up gulp
+## <a name="gulp"></a>Set up gulp
 
 Source files live in the `src` directory and are compiled with [gulp.js](https://gulpjs.com/).  You'll need to install gulp and the JavaScript modules specified in the devDependencies field of [`package.json`](https://github.com/uriweb/uri-plugin-template/blob/master/package.json).
 
@@ -36,11 +36,11 @@ Run gulp to make sure everything worked:
 $ gulp
 ```
 
-## <a name="testing"></a>Setting up code testing (optional)
+## <a name="testing"></a>Set up code sniffing (optional)
 
-Code testing is accomplished with PHP Code Sniffer.  Testing is optional (you can skip this setup harmlessly), but it's recommended.
+Code sniffing is accomplished with PHP Code Sniffer.  Sniffing is optional (you can skip this setup harmlessly), but it's recommended to be in compliance with WordPress code standards.
 
-You'll need to install some dependencies:
+You'll need to install some prerequisites:
 
 * [Composer](https://getcomposer.org), which is used to install PHP CodeSniffer
 * [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer), which is used to test code locally
