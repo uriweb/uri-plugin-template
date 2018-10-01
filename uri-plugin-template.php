@@ -8,7 +8,7 @@
  * Author URI: https://today.uri.edu/
  *
  * @author: Brandon Fuller <bjcfuller@uri.edu>
- * @package uri-link-previews
+ * @package uri-plugin-template
  */
 
 // Block direct requests
