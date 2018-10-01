@@ -6,15 +6,19 @@ The URI Plugin Template repository is a base template for building WordPress plu
 
 There are a few things you need to do to get up and running:
 
-1. Rename the main plugin file [`uri-plugin-template.php`](https://github.com/uriweb/uri-plugin-template/blob/master/uri-plugin-template.php) and update its header comment fields to match your new plugin.  Be sure to update the `@package` tag too.
+1. Download [master.zip](https://github.com/uriweb/uri-plugin-template/archive/master.zip) and unzip it
 
-2. URI Plugin Template ships with a [`package.json`](https://github.com/uriweb/uri-plugin-template/blob/master/package.json) file that's populated with information you'll want to change, such as the plugin name, description, repository, etc.
+2. Rename `.gitattributes-sample` to `.gitattributes`
 
-3. gulp runs a task to update the plugin version number from `package.json`, so you don't have to update it in two places.  However, gulp looks for the main plugin file by name in order to do this, so you'll need to update [`gulp.js`](https://github.com/uriweb/uri-plugin-template/blob/master/gulp.js) to reflect the new name.
+3. Rename the main plugin file [`uri-plugin-template.php`](https://github.com/uriweb/uri-plugin-template/blob/master/uri-plugin-template.php) and update its header comment fields (including the `@package` tag) to match your new plugin.
 
-3. The [`script.js`](https://github.com/uriweb/uri-plugin-template/blob/master/src/script.js) file in the [`src`](https://github.com/uriweb/uri-plugin-template/blob/master/src) directory has a `@package` tag, just like the main plugin file.  Make sure this one's updated too.
+4. Update [`package.json`](https://github.com/uriweb/uri-plugin-template/blob/master/package.json) with your new plugin name, description, repository, etc.
 
-Once you're done with these steps, you can move on to [setup](https://github.com/uriweb/uri-plugin-template/blob/master/SETUP.md).
+5. Update the `@package` tag in [`script.js`](https://github.com/uriweb/uri-plugin-template/blob/master/src/script.js) file in the [`src`](https://github.com/uriweb/uri-plugin-template/blob/master/src) directory.
+
+6. Finally, gulp runs a task to update the plugin version number from `package.json`, so you don't have to update it in two places.  However, gulp looks for the main plugin file by name in order to do this, so you'll need to update [`gulp.js`](https://github.com/uriweb/uri-plugin-template/blob/e7208805f9fedd83c29739de3307e91a0e64aaea/gulpfile.js#L86) to reflect the new name.
+
+Once you're done with these steps, head over to [SETUP.md](https://github.com/uriweb/uri-plugin-template/blob/master/SETUP.md) to get developer tools going.
 
 
 ## Plugin Details
