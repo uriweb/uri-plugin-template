@@ -1,5 +1,7 @@
 # Setting Up
 
+Running gulp and PHP Code Sniffer requires a few prerequsites.
+
 ## <a name="gulp"></a>Setting up gulp
 
 Source files live in the `src` directory and are compiled with [gulp.js](https://gulpjs.com/).  You'll need to install gulp and the JavaScript modules specified in the devDependencies field of [`package.json`](https://github.com/uriweb/uri-plugin-template/blob/master/package.json).
