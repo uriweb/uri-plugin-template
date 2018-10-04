@@ -18,7 +18,15 @@ There are a few things you need to do to get up and running:
 
 6. Finally, gulp runs a task to update the plugin version number from `package.json`, so you don't have to update it in two places.  However, gulp looks for the main plugin file by name in order to do this, so you'll need to update [`gulp.js`](https://github.com/uriweb/uri-plugin-template/blob/e7208805f9fedd83c29739de3307e91a0e64aaea/gulpfile.js#L86) to reflect the new name.
 
-Once you're done with these steps, head over to [SETUP.md](https://github.com/uriweb/uri-plugin-template/blob/master/SETUP.md) to get developer tools going.
+7. If you already have gulp and gulp-cli installed globally, install gulp and devDependencies in the project directory:
+
+```shell
+$ cd <project_dir>
+$ npm install gulp
+$ npm install --save-dev
+```
+
+For a more thorough install, and for PHP Code Sniffer support, head over to [SETUP.md](https://github.com/uriweb/uri-plugin-template/blob/master/SETUP.md).
 
 
 ## Plugin Details
