@@ -14,7 +14,7 @@ There are a few things you need to do to get up and running:
 
 4. Update [`package.json`](https://github.com/uriweb/uri-plugin-template/blob/master/package.json) with your new plugin info.
 
-5. Update the `@package` tag in [`src/js/script.js`](https://github.com/uriweb/uri-plugin-template/blob/master/src/script.js).
+5. Update the `@package` tag in [`src/js/script.js`](https://github.com/uriweb/uri-plugin-template/blob/master/src/js/script.js).
 
 6. Gulp runs a task to update the plugin version number from `package.json`, so you don't have to update it in two places.  However, gulp looks for the main plugin file by name in order to do this, so you'll need to update [`gulp.js`](https://github.com/uriweb/uri-plugin-template/blob/e7208805f9fedd83c29739de3307e91a0e64aaea/gulpfile.js#L86) to reflect the new name.
 
