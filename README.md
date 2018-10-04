@@ -10,13 +10,13 @@ There are a few things you need to do to get up and running:
 
 2. Rename `.gitattributes-sample` to `.gitattributes`
 
-3. Rename the main plugin file [`uri-plugin-template.php`](https://github.com/uriweb/uri-plugin-template/blob/master/uri-plugin-template.php) and update its header comment fields (including the `@package` tag) to match your new plugin.
+3. Rename the main plugin file [`uri-plugin-template.php`](https://github.com/uriweb/uri-plugin-template/blob/master/uri-plugin-template.php) and update the header to match your new plugin.
 
-4. Update [`package.json`](https://github.com/uriweb/uri-plugin-template/blob/master/package.json) with your new plugin name, description, repository, etc.
+4. Update [`package.json`](https://github.com/uriweb/uri-plugin-template/blob/master/package.json) with your new plugin info.
 
-5. Update the `@package` tag in [`script.js`](https://github.com/uriweb/uri-plugin-template/blob/master/src/script.js) file in the [`src`](https://github.com/uriweb/uri-plugin-template/blob/master/src) directory.
+5. Update the `@package` tag in [`src/js/script.js`](https://github.com/uriweb/uri-plugin-template/blob/master/src/script.js).
 
-6. Finally, gulp runs a task to update the plugin version number from `package.json`, so you don't have to update it in two places.  However, gulp looks for the main plugin file by name in order to do this, so you'll need to update [`gulp.js`](https://github.com/uriweb/uri-plugin-template/blob/e7208805f9fedd83c29739de3307e91a0e64aaea/gulpfile.js#L86) to reflect the new name.
+6. Gulp runs a task to update the plugin version number from `package.json`, so you don't have to update it in two places.  However, gulp looks for the main plugin file by name in order to do this, so you'll need to update [`gulp.js`](https://github.com/uriweb/uri-plugin-template/blob/e7208805f9fedd83c29739de3307e91a0e64aaea/gulpfile.js#L86) to reflect the new name.
 
 7. If you already have gulp and gulp-cli installed globally, install gulp and devDependencies in the project directory:
 
@@ -26,7 +26,7 @@ $ npm install gulp
 $ npm install --save-dev
 ```
 
-For a more thorough install, and for PHP Code Sniffer support, head over to [SETUP.md](https://github.com/uriweb/uri-plugin-template/blob/master/SETUP.md).
+**For a more thorough install, and for PHP Code Sniffer support, head over to [SETUP.md](https://github.com/uriweb/uri-plugin-template/blob/master/SETUP.md).**
 
 
 ## Plugin Details
