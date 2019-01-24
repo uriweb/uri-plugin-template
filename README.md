@@ -26,6 +26,8 @@ $ npm install gulp
 $ npm install --save-dev
 ```
 
+Finally, don't forget to update this readme.
+
 **For a more thorough install, and for PHP Code Sniffer support, head over to [SETUP.md](https://github.com/uriweb/uri-plugin-template/blob/master/SETUP.md).**
 
 
