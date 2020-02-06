@@ -2,11 +2,10 @@ var gulp = require('gulp');
 var pkg = require('./package.json');
 
 // include plug-ins
-var jshint = require('gulp-jshint');
-var jscs = require('gulp-jscs');
+var eslint = require('gulp-eslint');
 var concat = require('gulp-concat');
 //var stripDebug = require('gulp-strip-debug');
-var uglify = require('gulp-uglify');
+var terser = require('gulp-terser');
 var replace = require('gulp-replace-task');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
@@ -26,7 +25,7 @@ var sassOptions = {
 gulp.task('styles', styles);
 
 function styles(done) {
-    
+
 	gulp.src('./src/sass/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass(sassOptions).on('error', sass.logError))
@@ -44,24 +43,19 @@ function styles(done) {
 gulp.task('scripts', scripts);
 
 function scripts(done) {
-    
-	// Run JSHint for src js
+
+	// Run ESLint for src js
     gulp.src('./src/js/*.js')
-        .pipe(jshint(done))
-        .pipe(jshint.reporter('default'));
-    
-	// Run jscs for src js
-    gulp.src('./src/js/*.js')
-        .pipe(jscs(done))
-        .pipe(jscs.reporter());
-  
+        .pipe(eslint(done))
+        .pipe(eslint.format());
+
 	// Compile src js
     gulp.src('./src/js/*.js')
         .pipe(concat('script.built.js'))
         //.pipe(stripDebug())
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(gulp.dest('./js/'));
-    
+
 	done();
  // console.log('scripts ran');
 }
@@ -71,10 +65,10 @@ function scripts(done) {
 gulp.task('sniffs', sniffs);
 
 function sniffs(done) {
-    
+
     return gulp.src('.', {read:false})
         .pipe(shell(['./.sniff']));
-    
+
 }
 
 
@@ -82,7 +76,7 @@ function sniffs(done) {
 gulp.task('version', version);
 
 function version(done) {
-		
+
 	gulp.src('./uri-plugin-template.php')
 		.pipe(replace({
 			patterns: [{
@@ -91,7 +85,7 @@ function version(done) {
 			}]
 		}))
 		.pipe(gulp.dest('./'));
-	
+
 }
 
 
@@ -99,13 +93,13 @@ function version(done) {
 gulp.task('watcher', watcher);
 
 function watcher(done) {
-	
+
 	// watch for CSS changes
 	gulp.watch('./src/sass/*.scss', styles);
-    
+
     // watch for JS changes
 	gulp.watch('./src/js/*.js', scripts);
-	
+
 	// watch for PHP change
     gulp.watch('./**/*.php', sniffs);
 
