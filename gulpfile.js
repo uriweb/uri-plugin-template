@@ -7,7 +7,7 @@ var concat = require('gulp-concat');
 //var stripDebug = require('gulp-strip-debug');
 var terser = require('gulp-terser');
 var replace = require('gulp-replace-task');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer');
 var postcss = require('gulp-postcss');
@@ -46,7 +46,7 @@ function scripts(done) {
 
 	// Run ESLint for src js
     gulp.src('./src/js/*.js')
-        .pipe(eslint(done))
+	.pipe(eslint({fix:true}))
         .pipe(eslint.format());
 
 	// Compile src js
