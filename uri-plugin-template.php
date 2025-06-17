@@ -8,6 +8,7 @@
  * Author URI: https://today.uri.edu/
  *
  * @author: Brandon Fuller <bjcfuller@uri.edu>
+ * @author: Alexandra Gauss <alexandra_gauss@uri.edu>
  * @package uri-plugin-template
  */
 
